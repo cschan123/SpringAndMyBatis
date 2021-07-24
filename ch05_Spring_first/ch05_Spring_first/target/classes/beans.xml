@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--声明bean标签用来声明对象-->
+    <!--id,自定义唯一值，class,类的全限定名称，Spring根据id,class创建对象，吧对象放入
+    到SPring 的一个map对象-->
+    <bean id="someService" class="com.powernode.service.impl.SomeServiceImpl"></bean>
+    <bean id="someService1" class="com.powernode.service.impl.SomeServiceImpl"></bean>
+
+    <!--创建非自定义对象-->
+    <bean id="mydate" class="java.util.Date"></bean>
+
+
+</beans>

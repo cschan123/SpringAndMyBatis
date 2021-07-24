@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--声明bean-->
+    <!--1、set注入，赋值-->
+   <!-- <bean id="myStudent" class="com.powernode.entity.Student">
+        <property name="id" value="1"/>&lt;!&ndash;执行了setid&ndash;&gt;
+        <property name="name" value="ccs"/>&lt;!&ndash;执行了setname&ndash;&gt;
+        <property name="school" ref="mySchool"/>
+    </bean>-->
+
+
+    <bean id="myStudent" class="com.powernode.entity.Student" >
+        <constructor-arg name="id" value="1"/>
+        <constructor-arg name="name" value="JM"/>
+       <constructor-arg name="myschool" ref="mySchool"/>
+    </bean>
+    <!--引用类型赋值-->
+    <bean id="mySchool" class="com.powernode.entity.School">
+        <property name="name" value="北京大学"/><!--执行了setid-->
+        <property name="address" value="北京市海淀区"/><!--执行了setname-->
+    </bean>
+
+    <!--声明file 对象-->
+    <bean id="myFile" class="java.io.File">
+        <constructor-arg name="parent" value="E:\\2kSports"/>
+        <constructor-arg name="child" value="test.txt"/>
+    </bean>
+</beans>
